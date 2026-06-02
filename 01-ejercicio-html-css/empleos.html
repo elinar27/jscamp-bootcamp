@@ -1,12 +1,174 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
+
 <head>
-    <link rel="stylesheet" href="./style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explora miles de ofertas de empleo para desarrolladores en DevJobs" />
+  <title>DevJobs - Empleos</title>
 </head>
+
 <body>
-    
+  <header>
+    <!-- logo app -->
+    <a href="./index.html" class="logo">
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+      <h1>DevJobs</h1>
+    </a>
+    <!-- barra de navegacion -->
+    <nav aria-label="Navegación Principal">
+      <a href="./index.html">Inicio</a>
+      <a href="./empleos.html" class="active">Empleos</a>
+      <a href="#">Empresas</a>
+      <a href="#">Salarios</a>
+    </nav>
+    <!-- sección de usuario (sesión iniciada) -->
+    <nav aria-label="Navegación usuario" class="nav-usuario">
+      <button id="pub_empleo">Subir CV</button>
+      <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80" alt="Foto de perfil de usuario" />
+    </nav>
+  </header>
+
+  <main>
+    <!-- Buscador y Filtros -->
+    <section class="buscador-empleos">
+      <h1>Encuentra tu próximo trabajo</h1>
+      <p>Explora miles de oportunidades en el sector tecnológico.</p>
+
+      <form role="search" class="buscador-form-empleos" onsubmit="event.preventDefault();">
+        <div>
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+        <input type="search" name="empleos" placeholder="Buscar trabajos, empresas o habilidades" required />
+      </form>
+
+      <!-- Grupo de Filtros -->
+      <div class="filtros-grupo">
+        <button class="filtro-btn" type="button">
+          <span>Tecnología</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <button class="filtro-btn" type="button">
+          <span>Ubicación</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <button class="filtro-btn" type="button">
+          <span>Tipo de contrato</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <button class="filtro-btn" type="button">
+          <span>Nivel de experiencia</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Resultados de Búsqueda -->
+    <section class="seccion-resultados">
+      <h2>Resultados de búsqueda</h2>
+      <div class="listado-empleos">
+        <!-- Empleo 1 -->
+        <article class="empleo-tarjeta">
+          <div class="empleo-info">
+            <h3 class="empleo-titulo">Ingeniero de Software</h3>
+            <p class="empleo-meta">Tech Solutions Inc. | Remoto</p>
+            <p class="empleo-descripcion">
+              Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.
+            </p>
+          </div>
+          <div class="empleo-accion">
+            <button class="btn-aplicar">Aplicar</button>
+          </div>
+        </article>
+
+        <!-- Empleo 2 -->
+        <article class="empleo-tarjeta">
+          <div class="empleo-info">
+            <h3 class="empleo-titulo">Analista de Datos</h3>
+            <p class="empleo-meta">Data Driven Co. | Ciudad de México</p>
+            <p class="empleo-descripcion">
+              Estamos buscando un analista de datos con experiencia en el manejo de grandes conjuntos de datos y herramientas de visualización. Se requiere conocimiento en SQL, Python y R.
+            </p>
+          </div>
+          <div class="empleo-accion">
+            <button class="btn-aplicar">Aplicar</button>
+          </div>
+        </article>
+
+        <!-- Empleo 3 -->
+        <article class="empleo-tarjeta">
+          <div class="empleo-info">
+            <h3 class="empleo-titulo">Desarrollador de Aplicaciones Móviles</h3>
+            <p class="empleo-meta">Mobile Apps Ltd. | Guadalajara</p>
+            <p class="empleo-descripcion">
+              Buscamos un desarrollador de aplicaciones móviles con experiencia en iOS y/o Android. El candidato debe tener conocimientos en Swift, Kotlin y el desarrollo de interfaces de usuario.
+            </p>
+          </div>
+          <div class="empleo-accion">
+            <button class="btn-aplicar">Aplicar</button>
+          </div>
+        </article>
+
+        <!-- Empleo 4 -->
+        <article class="empleo-tarjeta">
+          <div class="empleo-info">
+            <h3 class="empleo-titulo">Ingeniero de DevOps</h3>
+            <p class="empleo-meta">Cloud Services SA | Remoto</p>
+            <p class="empleo-descripcion">
+              Estamos buscando un ingeniero de DevOps con experiencia en la gestión de infraestructuras en la nube, automatización de procesos y herramientas de integración continua. Se requiere conocimiento en AWS, Azure o GCP.
+            </p>
+          </div>
+          <div class="empleo-accion">
+            <button class="btn-aplicar">Aplicar</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Paginación -->
+    <div class="paginacion-container">
+      <nav aria-label="Paginación" class="paginacion">
+        <a href="#" class="pag-flecha" aria-label="Página anterior">
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <a href="#" class="pag-link activa" aria-current="page">1</a>
+        <a href="#" class="pag-link">2</a>
+        <a href="#" class="pag-link">3</a>
+        <a href="#" class="pag-link">4</a>
+        <a href="#" class="pag-link">5</a>
+        <a href="#" class="pag-flecha" aria-label="Siguiente página">
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
+  </footer>
 </body>
+
 </html>
