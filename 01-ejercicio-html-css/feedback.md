@@ -1,0 +1,2 @@
+Excelente trabajo! Dejamos algunos cambios en el código con sus comentarios, espero que te sirvan y cualquier duda, nos puedes preguntar!
+Dejamos un archivo `dudas.md` por si nos quieres escribir por ahí, un saludo!
